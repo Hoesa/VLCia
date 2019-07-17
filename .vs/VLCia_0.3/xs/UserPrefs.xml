@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{5A5D074A-8673-4A6F-8394-5516C042B570}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VLCia_0.3/README.txt">
+    <Files>
+      <File FileName="VLCia_0.3/Program.cs" Line="58" Column="59" />
+      <File FileName="VLCia_0.3/MainWindow.cs" Line="11" Column="64" />
+      <File FileName="VLCia_0.3/README.txt" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VLCia_0.3" expanded="True">
+            <Node name="VLCia" expanded="True">
+              <Node name="README.txt" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.VLCia PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,17 @@
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/VLCia_0.3.exe
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/LibVLCSharp.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/LibVLCSharp.GTK.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/Microsoft.Threading.Tasks.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/Microsoft.Threading.Tasks.Extensions.Desktop.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/Microsoft.Threading.Tasks.Extensions.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/System.Runtime.InteropServices.RuntimeInformation.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/System.ValueTuple.dll
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/Microsoft.Threading.Tasks.xml
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/Microsoft.Threading.Tasks.Extensions.Desktop.xml
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/Microsoft.Threading.Tasks.Extensions.xml
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/System.ValueTuple.xml
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/LibVLCSharp.xml
+/home/hoesa/Projects/VLCia/VLCia_0.3/bin/Release/LibVLCSharp.GTK.xml
+/home/hoesa/Projects/VLCia/VLCia_0.3/obj/x86/Release/VLCia_0.3.csproj.CoreCompileInputs.cache
+/home/hoesa/Projects/VLCia/VLCia_0.3/obj/x86/Release/VLCia_0.3.csproj.CopyComplete
+/home/hoesa/Projects/VLCia/VLCia_0.3/obj/x86/Release/VLCia_0.3.exe
