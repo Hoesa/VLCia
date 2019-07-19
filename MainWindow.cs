@@ -63,7 +63,7 @@ public partial class MainWindow : Gtk.Window
         else if (mediaplay == true)
         {
             mediaPlayer.Pause();
-            if (mediapause == true)
+            if (mediapause == false)
             { txt.Text = "Pause"; mediapause = true; }
             else
             { txt.Text = "Playing"; mediapause = false; }
@@ -75,7 +75,6 @@ public partial class MainWindow : Gtk.Window
     protected void Pause(object sender, EventArgs e)
     {
         mediaPlayer.Pause();
-
         if (mediapause == false)
         { txt.Text = "Pause"; mediapause = true; }
         else
@@ -128,6 +127,8 @@ public partial class MainWindow : Gtk.Window
         {
             mediaPlayer.Stop();
             mediaplay = false;
+            scale.Sensitive = false;
+            scale.Value = 0;
             txt.Text = "Stopped";
         }
     }
