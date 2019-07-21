@@ -7,3 +7,4 @@ Known bugs:
 2. Refresh can only be clicked once per startup. (Done deliberatly so it wont create duplicates in the dropdown menu.)
 3. Due to a current bug in libvlcsharp-gtk the native media player does not work on macOS.
 4. Only works if sia runs on port 9980.
+5. Slider is in the making. 
