@@ -7,7 +7,7 @@
     <widget-library name="../packages/LibVLCSharp.GTK.3.1.0/lib/net47/LibVLCSharp.GTK.dll" />
     <widget-library name="../bin/Debug/VLCia.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="400 175">
+  <widget class="Gtk.Window" id="MainWindow" design-size="400 172">
     <property name="MemberName" />
     <property name="Title" translatable="yes">VLCia</property>
     <property name="Icon">stock:gtk-media-play Menu</property>
@@ -22,11 +22,12 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <widget class="Gtk.ComboBox" id="choose">
-                <property name="MemberName">choose</property>
+              <widget class="Gtk.ComboBox" id="cbox">
+                <property name="MemberName">cbox</property>
+                <property name="Sensitive">False</property>
                 <property name="IsTextCombo">True</property>
                 <property name="Items" translatable="yes" />
-                <signal name="Changed" handler="Changed" />
+                <signal name="Changed" handler="Combochanged" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -129,10 +130,19 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Label" id="txt">
-            <property name="MemberName">txt</property>
-            <property name="LabelProp" translatable="yes">Welcome</property>
-            <property name="Selectable">True</property>
+          <widget class="Gtk.HScale" id="scale">
+            <property name="MemberName">scale</property>
+            <property name="HeightRequest">55</property>
+            <property name="Sensitive">False</property>
+            <property name="CanFocus">True</property>
+            <property name="Upper">0.01</property>
+            <property name="PageIncrement">5</property>
+            <property name="StepIncrement">0.5</property>
+            <property name="DrawValue">True</property>
+            <property name="Digits">0</property>
+            <property name="ValuePos">Top</property>
+            <signal name="ValueChanged" handler="OnScaleValueChanged" />
+            <signal name="FocusGrabbed" handler="OnScaleFocusGrabbed" />
           </widget>
           <packing>
             <property name="Position">2</property>
@@ -147,24 +157,16 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <widget class="Gtk.HScale" id="scale">
-                <property name="MemberName">scale</property>
-                <property name="HeightRequest">55</property>
-                <property name="Sensitive">False</property>
-                <property name="CanFocus">True</property>
-                <property name="Upper">0.01</property>
-                <property name="PageIncrement">5</property>
-                <property name="StepIncrement">0.5</property>
-                <property name="DrawValue">True</property>
-                <property name="Digits">0</property>
-                <property name="ValuePos">Top</property>
+              <widget class="Gtk.Label" id="txt">
+                <property name="MemberName">txt</property>
+                <property name="LabelProp" translatable="yes">Welcome</property>
+                <property name="Selectable">True</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
                 <property name="AutoSize">True</property>
                 <property name="Expand">False</property>
                 <property name="Fill">False</property>
-                <property name="Padding">2</property>
               </packing>
             </child>
           </widget>

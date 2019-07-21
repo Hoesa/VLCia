@@ -1,22 +1,36 @@
 ﻿<Properties StartupConfiguration="{7FD1B91B-61E2-482A-A65A-A974B1482B2A}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="MainWindow.cs" Line="12" Column="33" />
+      <File FileName="Program.cs" Line="32" Column="1" />
+      <File FileName="MainWindow.cs" Line="170" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="VLCia" expanded="True" selected="True" />
+          <Node name="VLCia" expanded="True">
+            <Node name="VLCia" expanded="True">
+              <Node name="UserInterface" expanded="True" />
+              <Node name="MainWindow.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.VLCia PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../MainWindow.cs" line="153" offsetX="351" offsetY="2888" expression="time" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/hoesa/Documents/LetsGetReal/VLCia/MainWindow.cs" relfile="MainWindow.cs" line="191" column="18" />
+      <Breakpoint file="/home/hoesa/Documents/LetsGetReal/VLCia/MainWindow.cs" relfile="MainWindow.cs" line="196" column="1" />
+      <Breakpoint file="/home/hoesa/Documents/LetsGetReal/VLCia/MainWindow.cs" relfile="MainWindow.cs" line="201" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

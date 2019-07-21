@@ -7,7 +7,7 @@ public partial class MainWindow
 
 	private global::Gtk.HBox hbox1;
 
-	private global::Gtk.ComboBox choose;
+	private global::Gtk.ComboBox cbox;
 
 	private global::Gtk.Button refresh;
 
@@ -21,11 +21,11 @@ public partial class MainWindow
 
 	private global::Gtk.Button stop;
 
-	private global::Gtk.Label txt;
+	private global::Gtk.HScale scale;
 
 	private global::Gtk.VBox vbox2;
 
-	private global::Gtk.HScale scale;
+	private global::Gtk.Label txt;
 
 	protected virtual void Build()
 	{
@@ -44,10 +44,11 @@ public partial class MainWindow
 		this.hbox1.Name = "hbox1";
 		this.hbox1.Spacing = 6;
 		// Container child hbox1.Gtk.Box+BoxChild
-		this.choose = global::Gtk.ComboBox.NewText();
-		this.choose.Name = "choose";
-		this.hbox1.Add(this.choose);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.choose]));
+		this.cbox = global::Gtk.ComboBox.NewText();
+		this.cbox.Sensitive = false;
+		this.cbox.Name = "cbox";
+		this.hbox1.Add(this.cbox);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.cbox]));
 		w1.Position = 0;
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.refresh = new global::Gtk.Button();
@@ -115,21 +116,6 @@ public partial class MainWindow
 		w9.Expand = false;
 		w9.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.txt = new global::Gtk.Label();
-		this.txt.Name = "txt";
-		this.txt.LabelProp = global::Mono.Unix.Catalog.GetString("Welcome");
-		this.txt.Selectable = true;
-		this.vbox1.Add(this.txt);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.txt]));
-		w10.Position = 2;
-		w10.Expand = false;
-		w10.Fill = false;
-		w10.Padding = ((uint)(5));
-		// Container child vbox1.Gtk.Box+BoxChild
-		this.vbox2 = new global::Gtk.VBox();
-		this.vbox2.Name = "vbox2";
-		this.vbox2.Spacing = 6;
-		// Container child vbox2.Gtk.Box+BoxChild
 		this.scale = new global::Gtk.HScale(null);
 		this.scale.HeightRequest = 55;
 		this.scale.Sensitive = false;
@@ -141,12 +127,26 @@ public partial class MainWindow
 		this.scale.DrawValue = true;
 		this.scale.Digits = 0;
 		this.scale.ValuePos = ((global::Gtk.PositionType)(2));
-		this.vbox2.Add(this.scale);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.scale]));
+		this.vbox1.Add(this.scale);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.scale]));
+		w10.Position = 2;
+		w10.Expand = false;
+		w10.Fill = false;
+		w10.Padding = ((uint)(5));
+		// Container child vbox1.Gtk.Box+BoxChild
+		this.vbox2 = new global::Gtk.VBox();
+		this.vbox2.Name = "vbox2";
+		this.vbox2.Spacing = 6;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.txt = new global::Gtk.Label();
+		this.txt.Name = "txt";
+		this.txt.LabelProp = global::Mono.Unix.Catalog.GetString("Welcome");
+		this.txt.Selectable = true;
+		this.vbox2.Add(this.txt);
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.txt]));
 		w11.Position = 0;
 		w11.Expand = false;
 		w11.Fill = false;
-		w11.Padding = ((uint)(2));
 		this.vbox1.Add(this.vbox2);
 		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.vbox2]));
 		w12.Position = 3;
@@ -158,14 +158,16 @@ public partial class MainWindow
 			this.Child.ShowAll();
 		}
 		this.DefaultWidth = 400;
-		this.DefaultHeight = 175;
+		this.DefaultHeight = 172;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
-		this.choose.Changed += new global::System.EventHandler(this.Changed);
+		this.cbox.Changed += new global::System.EventHandler(this.Combochanged);
 		this.refresh.Clicked += new global::System.EventHandler(this.Refresh);
 		this.url.Clicked += new global::System.EventHandler(this.Url);
 		this.play.Clicked += new global::System.EventHandler(this.Play);
 		this.pause.Clicked += new global::System.EventHandler(this.Pause);
 		this.stop.Clicked += new global::System.EventHandler(this.Stop);
+		this.scale.ValueChanged += new global::System.EventHandler(this.OnScaleValueChanged);
+		this.scale.FocusGrabbed += new global::System.EventHandler(this.OnScaleFocusGrabbed);
 	}
 }
