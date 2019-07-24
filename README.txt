@@ -1,5 +1,5 @@
-﻿VLCia is a small mediaplayer for your media files on the SIA network.
-For VLCia to work Siad must be up and running.
+﻿VLCia is a small mediaplayer for your media files on the SIA network. Combining two greats VLC and SIA.
+For VLCia to work Siad must be up and running and VLC must be installed.
 VLCia (should) work(s) on Windows, Linux and macOS. 
 
 Known bugs:
