@@ -3,6 +3,7 @@ using Gtk;
 using System.IO;
 using System.Net.Http;
 using System.Collections.Generic;
+using System.Net;
 
 namespace VLCia
 {
@@ -41,8 +42,19 @@ namespace VLCia
                 {
                     request.Headers.TryAddWithoutValidation("User-Agent", "Sia-Agent");           
                     HttpResponseMessage response = await httpClient.SendAsync(request);
-                    response.EnsureSuccessStatusCode();                                 
-                    json = await response.Content.ReadAsStringAsync();
+                   
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        json = await response.Content.ReadAsStringAsync();
+                        MainWindow.refreshb = false;
+                        MainWindow.refreshm = "Refresh succeeded";
+                    }
+                    else
+                    {
+                        json = await response.Content.ReadAsStringAsync();
+                        MainWindow.refreshb = true;
+                        MainWindow.refreshm = "Please let Sia load";
+                    }
                 }
             }
         }

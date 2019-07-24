@@ -3,6 +3,7 @@ using Gtk;
 using LibVLCSharp.Shared;
 using LibVLCSharp.GTK;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 public partial class MainWindow : Gtk.Window
 
@@ -12,6 +13,8 @@ public partial class MainWindow : Gtk.Window
     bool mediapause = false; //bool to check if media is paused
     string stream; //file to stream
     bool scrol = false; //bool to check if user is scrolling
+    public static string refreshm; //To change txt label after refresh
+    public static bool refreshb; //To change combobox active after refresh
 
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
@@ -105,16 +108,27 @@ public partial class MainWindow : Gtk.Window
     //Refresh
     protected async void Refresh(object sender, EventArgs e)
     {
+        Process[] siad = Process.GetProcessesByName("siad");
+
+        if (siad.Length == 0)
+        {
+            txt.Text = "Please run siad";
+        }
+
+        else
+        { 
         await VLCia.MainClass.RefresAsync();
         VLCia.MainClass.Process();
 
         foreach (string media in VLCia.MainClass.mediafiles)
-        {
+          {
             cbox.AppendText(media);
-        }
+          }
 
-        refresh.Sensitive = false;
+        txt.Text = refreshm;
+        refresh.Sensitive = refreshb;
         cbox.Sensitive = true;
+        }
     }
 
     //Copy stream URL to Clipboard
